@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    display: none;
+    box-shadow: inset 0 0 6px rgba(0,0,0,1);
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background-color: rgba(92, 90, 90, 0.5);
+    width: 1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+    outline:none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, "Ubuntu", "Cantarell", "Fira Sans", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.message-section {
+    overflow-y: scroll !important;
+    box-sizing: border-box;
+    position: relative;
+    height: 92vh;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-feed {
+    background-image: url(https://64.media.tumblr.com/44451ddf448de2235f8370c138b00121/tumblr_ouztgbH0CG1vj8v9mo3_1280.png);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message {
+    border-radius: 6px;
+    padding:1px 10px;
+    font-size: 18px;
+    font-weight: 400;
+    max-width:50%;
+    min-width: 25%;
+    color: black;
+    overflow-wrap: break-word;
+}
+
+.message-details {
+    font-size: 12px;
+    color: rgb(175, 168, 168);
+    text-align: end;
+    margin-top: -2px;
+}
+
+.message-sender-details {
+    font-size: 12px;
+    font-weight:bold;
+    color: rgb(246, 247, 184);
+    text-align: start;
+    padding-bottom: 4px;
+}
+
+.message-block {
+    display: inline-block;
+    width: 100%;
+}
+
+.message-image {
+    border-radius: 6px;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 100px;
+    min-width: 100px;
+    object-fit:cover;
+    height: 30vw;
+    transition: transform ease-in-out 0.3s;
+}
+
+.message-image:hover {
+    transform : scale(2) translate(-50px, -50px);
+}
+
+.message-form-container {
+    background-color: lightgray;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.message-form {
+    padding: 0 10px 0 10px;
+    width: 100%;
+    height: 37px;
+    display:flex;
+    align-items: center;
+}
+
+.message-form-input {
+    border-radius: 40px;
+    flex-grow: 1;
+    align-self: stretch;
+}
+
+.message-form-send {
+    background-color: lightgreen;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.send-icon {
+    font-size: 200%;
+    position:relative
+}
+
+.send-click {
+    /* margin: auto; */
+    height: 100%;
+}
+
+.upload-icon {
+    font-size: 200%;
+    position:relative;
+
+}
+
+.upload-click {
+    /* margin-right: 10px; */
+    height: 37px;
+
+}
+
+.welcome-page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 35vh;
+    
+}
+
+.username-input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.password-input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.login-form-input {
+    /* align-self: center; */
 }
