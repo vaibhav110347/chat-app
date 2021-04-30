@@ -4,9 +4,8 @@ import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
 
 const ChatFeed = (props) => {
-    //console.log(props)
 
-    let {messages, userName, chats} = props;
+    let {messages, userName, chats, activeChat} = props;
     let keys = Object.keys(messages);
     let renderedMessages = keys.map((key, index) => {
         let isMyMessage = messages[key].sender_username === userName;
@@ -22,10 +21,17 @@ const ChatFeed = (props) => {
             </div>
         )
     })
+
+    let groupHeader = chats?.[activeChat].title;
     return (
         <div className = "chat-feed">
-            <div className= "message-section">
-                {renderedMessages}
+            <div className = "Group header" style = {{textAlign : 'center', border:'1px solid black', backgroundColor:'lightgray', boxSizing:'border-box', marginBottom:'8px'}}>
+                <h2 style = {{}}>{groupHeader}</h2>
+            </div>
+            <div className= "message-section-wrapper">
+                <div className = "message-section">
+                    {renderedMessages}
+                </div>
             </div>
             <div className = "message-form-container">
                 <MessageForm {...props}/>
