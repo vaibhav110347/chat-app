@@ -22,7 +22,7 @@ const ChatFeed = (props) => {
         )
     })
 
-    let groupHeader = chats?.[activeChat].title;
+    let groupHeader = chats?.[activeChat]?.title;
     return (
         <div className = "chat-feed">
             <div className = "Group header" style = {{textAlign : 'center', border:'1px solid black', backgroundColor:'lightgray', boxSizing:'border-box', marginBottom:'8px'}}>
