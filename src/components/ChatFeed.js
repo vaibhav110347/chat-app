@@ -4,7 +4,6 @@ import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
 
 const ChatFeed = (props) => {
-    console.log(props)
 
     let {messages, userName, chats, activeChat} = props;
     let keys = Object.keys(messages);

@@ -6,7 +6,6 @@ const MessageForm = (props) => {
     
     const [messageText, setMessageText] = useState('');
     let {activeChat} = props;
-    // console.log(props)
     
     const onSubmit = (e) => {
         e.preventDefault();
