@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/fontawesome-free'
-import { faCheckCircle} from '@fortawesome/fontawesome-free'
 
 const OurMessage = ({message}) => {
 
@@ -15,18 +13,24 @@ const OurMessage = ({message}) => {
                 backgroundColor: "rgb(220, 248, 198)"
             }}
         >
-            {isAttachement ?
-                <img 
-                    src = {message.attachments[0].file} 
-                    alt = "message-attachment"
-                    className = "message-image"
-                    style = {{}}
-                /> :
-                message.text}
+            <div className = "message-sender-details">
+                {null}
+            </div>
+
+            <div className = "message-content">
+                {isAttachement ?
+                    <img 
+                        src = {message.attachments[0].file} 
+                        alt = "message-attachment"
+                        className = "message-image"
+                        style = {{}}
+                    /> :
+                    message.text
+                }
+            </div>
                 
             <div className = "message-details">
                 {new Date(message.created).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}
-                {/* <FontAwesomeIcon icon = {faCheckCircle} /> */}
             </div>
         </div>
     )
